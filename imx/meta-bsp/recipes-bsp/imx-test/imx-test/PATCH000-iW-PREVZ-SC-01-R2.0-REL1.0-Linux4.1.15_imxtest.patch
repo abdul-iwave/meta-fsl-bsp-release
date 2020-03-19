@@ -1,0 +1,16 @@
+diff -Naur A/test/pxp_v4l2_test/Makefile B/test/pxp_v4l2_test/Makefile
+--- A/test/pxp_v4l2_test/Makefile	2017-05-11 09:07:50.793466195 +0530
++++ B/test/pxp_v4l2_test/Makefile	2017-05-11 09:00:07.373457305 +0530
+@@ -1,10 +1,10 @@
+ # Just use the pxp library to get contiguous physical memory for USERPTR testing
+ # However, be aware that this is not the only way.
+-CFLAGS += -DGET_CONTI_PHY_MEM_VIA_PXP_LIB
++#CFLAGS += -DGET_CONTI_PHY_MEM_VIA_PXP_LIB
+ 
+ TARGET = $(OBJDIR)/pxp_v4l2_test.out \
+-	$(OBJDIR)/pxp_v4l2_out_test.sh \
+-	$(OBJDIR)/mx6s_v4l2_capture.out
++	$(OBJDIR)/mx6s_v4l2_capture.out \
++	$(OBJDIR)/pxp_v4l2_out_test.sh
+ 
+ all : $(TARGET)
